@@ -12,10 +12,8 @@ function mainController($scope, $http) {
             $scope.tempArtists = JSON.parse(data.body);
 
             $scope.tempArtists.artists.map(function(obj, index, arr){ 
-                return( index < 6 ?  $scope.data[obj.artistId] = obj.artistName : $scope.data);
+                return( index < 6 ?  $scope.data.push({"image_url": 'http://iscale.iheart.com/catalog/artist/' + obj.artistId + '?ops=fit(250,0)', "name" : obj.artistName}) : $scope.data);
             });
-
-            console.log($scope.data);
            
         })
         .error(function(data) {

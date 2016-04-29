@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
     <title>Node/Angular Radio Search App</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-    <style>
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #artist-list              { margin-bottom:30px; }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
 
     <!-- scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
@@ -23,26 +18,25 @@
 <body ng-controller="mainController">
     <div class="container">
 
-        <div class="jumbotron text-center">
+        <div class="text-center">
             <h1>Welcome</h1>
         </div>
 
-        <div id="artist-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-     <!--            <div ng-repeat="item in data">{{item.artistName}}</div> -->
-
+        <div ng-if="data.length > 1" id="artist-list">
+            <div ng-repeat="item in data" class="thumbnail">{{item.name}}
+               <img src={{item.image_url}}></img>
             </div>
         </div>
 
         <div id="artist-form" class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
+            <div class="text-center">
                 <form>
-                    <div class="form-group">
+                    <div class="form-control">
 
-                        <input type="text" class="form-control input-lg text-center" placeholder="Type an Artist Name" ng-model="formData.artist">
+                        <input type="text" class="text-center" placeholder="Type an Artist Name" ng-model="formData.artist">
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createSearch()">Search</button>
+                    <button type="submit" class="" ng-click="createSearch()">Search</button>
                 </form>
             </div>
         </div> 
