@@ -10,9 +10,13 @@ function mainController($scope, $http) {
             $scope.formData = {};
             $scope.data = [];
             $scope.tempArtists = JSON.parse(data.body);
-        
-            $scope.tempArtists.artists.map(function(info, artist){ return($scope.data.length < 6 ? $scope.data[artist] = info : $scope.data);});
+
+            $scope.tempArtists.artists.map(function(obj, index, arr){ 
+                return( index < 6 ?  $scope.data[obj.artistId] = obj.artistName : $scope.data);
+            });
+
             console.log($scope.data);
+           
         })
         .error(function(data) {
             console.log('Error: ', data);
