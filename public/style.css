@@ -35,11 +35,14 @@
   .thumbnail {
     width: 49.25%;
   }
+  img {
+    width: 80%;
+  }
 }
 
 
 img {
-  max-width: 100%;
+  max-width: 250px;
   height: auto;
 }
 
