@@ -17,12 +17,12 @@
         <div class="text-center">
             <form>
                 <div class="form-control">
-                    <input type="text" class="text-center" placeholder="enter artist by name" ng-model="formData.artist">
+                    <input type="text" class="text-center" placeholder="enter artist name" ng-model="formData.artist">
                 </div>
             <button type="submit" class="" ng-click="createSearch()">Search</button>
             </form>
-         </div>
-        <div ng-if="data.length > 1" id="artist-list">
+        </div>
+        <div ng-if="data.length > 1">
             <div ng-repeat="item in data" class="thumbnail">
                <img ng-src={{item.image_url}}></img>
                <div class="title">{{item.name}}</div>
