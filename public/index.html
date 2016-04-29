@@ -15,26 +15,20 @@
 <body ng-controller="mainController">
     <div class="container">
         <div class="text-center">
-            <h1>Welcome</h1>
-        </div>
+            <form>
+                <div class="form-control">
+                    <input type="text" class="text-center" placeholder="Type an Artist Name" ng-model="formData.artist">
+                </div>
+            <button type="submit" class="" ng-click="createSearch()">Search</button>
+            </form>
+         </div>
         <div ng-if="data.length > 1" id="artist-list">
             <div ng-repeat="item in data" class="thumbnail">
-                <div class="title">{{item.name}}</div>
                <img ng-src={{item.image_url}}></img>
+               <div class="title">{{item.name}}</div>
+               <div ng-if="item.description" class="description">{{item.description}}</div>
             </div>
         </div>
-
-        <div id="artist-form" class="row">
-            <div class="text-center">
-                <form>
-                    <div class="form-control">
-                        <input type="text" class="text-center" placeholder="Type an Artist Name" ng-model="formData.artist">
-                    </div>
-
-                    <button type="submit" class="" ng-click="createSearch()">Search</button>
-                </form>
-            </div>
-        </div> 
     </div>
 </body>
 </html>

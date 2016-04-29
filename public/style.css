@@ -8,7 +8,7 @@
   margin: 0 auto 50px;
   padding: 0 4%;
   font-family: Helvetica,sans-serif;
-  font-size: 0.7em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -27,8 +27,22 @@
   padding: 0;
 }
 
+.description {
+  font-size: 0.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
 .title {
   font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 768px) {
@@ -40,7 +54,6 @@
   }
 }
 
-
 img {
   max-width: 250px;
   height: auto;
@@ -50,8 +63,10 @@ img {
   text-align: center;
 }
 
-.form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
+.form-control, button {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  position: relative;
+  margin: 10px 0;
 }
