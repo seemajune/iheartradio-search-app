@@ -23,7 +23,8 @@
         </div>
 
         <div ng-if="data.length > 1" id="artist-list">
-            <div ng-repeat="item in data" class="thumbnail">{{item.name}}
+            <div ng-repeat="item in data" class="thumbnail">
+                <div class="title">{{item.name}}</div>
                <img src={{item.image_url}}></img>
             </div>
         </div>

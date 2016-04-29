@@ -25,7 +25,10 @@
   cursor: pointer;
   margin: 0;
   padding: 0;
-  text-align: center;
+}
+
+.title {
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
