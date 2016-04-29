@@ -29,12 +29,10 @@ function mainController($scope, $http) {
             $scope.formData = {};
             $scope.data = [];
             $scope.tempArtists = JSON.parse(data.body);
-            console.log($scope.tempArtists);
 
             $scope.tempArtists.artists.map(function(obj, index, arr){ 
-                return( index < 6 ?  $scope.data.push({"image_url": 'http://iscale.iheart.com/catalog/artist/' + obj.artistId + '?ops=fit(250,0)', "name" : obj.artistName}) : $scope.data);
-            });  
-            console.log($scope.data);       
+                return( index < 6 ?  $scope.data.push({'image_url': 'http://iscale.iheart.com/catalog/artist/' + obj.artistId + '?ops=fit(250,0)', 'name' : obj.artistName}) : $scope.data);
+            });      
         })
 
         .error(function(data) {

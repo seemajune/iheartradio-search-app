@@ -28,16 +28,14 @@
 }
 
 .description {
-  font-size: 0.8rem;
-  overflow: hidden;
-  white-space: nowrap;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  font-size: 0.7em;
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 0.8em;
+}
+
+.description, .title {
   overflow: hidden;
   white-space: nowrap;
   -ms-text-overflow: ellipsis;
