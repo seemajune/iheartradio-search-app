@@ -31,7 +31,7 @@ function mainController($scope, $http) {
             $scope.tempArtists = JSON.parse(data.body);
 
             $scope.tempArtists.artists.map(function(obj, index){ 
-                return( index < 6 ?  $scope.artists.push({'image_url': 'http://iscale.iheart.com/catalog/artist/' + obj.artistId + '?ops=fit(250,0)', 'name' : obj.artistName}) : $scope.artists);
+                return( index < 6 ?  $scope.artists.push({'image_url': 'http://iscale.iheart.com/catalog/artist/' + obj.artistId + '?ops=fit(250,0)', 'name' : obj.artistName, "radio_link" : "http://www.iheart.com/artist/" + obj.artistName.replace(/[^a-zA-Z-]/g, "-") + "-" + obj.artistId}) : $scope.artists);
             });   
         })
 
