@@ -5,7 +5,8 @@ function mainController($scope, $http) {
     $scope.artists = [{
         'image_url': 'http://iscale.iheart.com/catalog/artist/744880?ops=fit(250,0)',
         'description': 'Feat. August Alsina, Jeremih and more',
-        'name': 'The Weeknd'}, 
+        'name': 'The Weeknd'
+        }, 
         { 'image_url': 'http://iscale.iheart.com/catalog/artist/57706?ops=fit(250,0)',
         'description': 'Feat. Ariana Grande, Demi Lovato and more',
         'name': 'Selena Gomez'},
